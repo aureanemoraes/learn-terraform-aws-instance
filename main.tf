@@ -19,7 +19,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
+  ami           = "ami-0223246728818f162"
   instance_type = "t2.micro"
   key_name = "iac-alura"
   # user_data = <<-EOF
@@ -29,8 +29,8 @@ resource "aws_instance" "app_server" {
   #   nohup busybox httpd -f -p 8080 &
   # EOF
   tags = {
-    Name = "Teste AWS"
+    Name = "AWS - Terraform - Ansiable - Pyhton Environment"
   }
 }
 
-# ansible-playbook playbook.yml -u ubuntu --private-key iac-alura.pem -i 
+# ansible-playbook playbook.yml -u ubuntu --private-key iac-alura.pem -i host.yml
